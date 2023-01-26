@@ -7,7 +7,7 @@ clear:
 	rm -rf s21_log ./*.o s21_pow
 	
 s21_log: s21_log.c
-	$(GCC) $(CFLAGS) s21_log.c  -lm -o s21_log 
+	$(GCC) $(CFLAGS) -fsanitize=address -lcheck s21_log.c  -lm -o s21_log 
 
 s21_pow: s21_pow.c
 	$(GCC) $(CFLAGS) s21_pow.c  -lm -o s21_pow
