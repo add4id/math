@@ -6,13 +6,11 @@
 #include <stdlib.h>
 
 #define LOG_10 2.30258509299
-#define LOG_2 0.693147180575002
 #define s21_EPS 1e-25
 
 double s21_log(double x);
 
 int main() {
-  printf("Hello!\n");
   double x = 6650.587500;
   printf("Math sys = %lf\n", log(x));
   printf("math s21 = %lf\n", s21_log(x));
@@ -26,9 +24,9 @@ double s21_log(double x) {
   while (x >= 1) {
     x = x / 2;
     n_pow++;
-    printf("x = %lf,n_pow = %d\n", x, n_pow);
+    // printf("x = %lf,n_pow = %d\n", x, n_pow);
   }
-  printf("Reduce end x =%lf\n", x);
+  // printf("Reduce end x =%lf\n", x);
   cur_pos = x - 1;
   totalValue = cur_pos;
   while (fabs(step) >= 1e-24) {
