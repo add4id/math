@@ -5,17 +5,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define LOG_10 2.30258509299
+#define LOG_2 0.693147180575002
 #define s21_EPS 1e-25
 
 double s21_log(double x);
-
-int main() {
-  double x = 6650.587500;
-  printf("Math sys = %lf\n", log(x));
-  printf("math s21 = %lf\n", s21_log(x));
-  return 0;
-}
 
 double s21_log(double x) {
   double cur_pos, step = 1, period, totalValue;
